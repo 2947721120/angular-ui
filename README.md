@@ -1,6 +1,6 @@
 # AngularUI Router &nbsp;[![Build Status](https://travis-ci.org/angular-ui/ui-router.svg?branch=master)](https://travis-ci.org/angular-ui/ui-router)
 
-#### The de-facto solution to flexible routing with nested views
+#### 事实上的解决方案，灵活的嵌套视图路由
 ---
 **[Download 0.2.18](https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.js)** (or **[Minified](https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.min.js)**) **|**
 **[Guide](https://github.com/angular-ui/ui-router/wiki) |**
