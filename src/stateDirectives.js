@@ -357,7 +357,7 @@ function $StateRefActiveDirective($state, $stateParams, $interpolate) {
         return state;
       }
 
-      // Update route state
+      // 更新路由状态
       function update() {
         for (var i = 0; i < states.length; i++) {
           if (anyMatch(states[i].state, states[i].params)) {
