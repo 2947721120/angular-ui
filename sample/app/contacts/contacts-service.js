@@ -16,7 +16,7 @@ angular.module('uiRouterSample.contacts.service', [
   factory.get = function (id) {
     return contacts.then(function(){
       return utils.findById(contacts, id);
-    })
+    });
   };
   return factory;
 }]);

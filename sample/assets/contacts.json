@@ -2,7 +2,7 @@
   "contacts":[
     {
       "id": 1,
-      "name": "Alice",
+      "name": "爱丽丝",
       "items": [
         {
           "id": "a",
@@ -18,7 +18,7 @@
     },
     {
       "id": 42,
-      "name": "Bob",
+      "name": "短发",
       "items": [
         {
           "id": "a",
@@ -34,12 +34,12 @@
     },
     {
       "id": 123,
-      "name": "Eve",
+      "name": "前夕",
       "items": [
         {
           "id": "a",
-          "type": "full name",
-          "value": "Eve Adamsdottir"
+          "type": "全名",
+          "value": "夏娃亚当斯Dottir"
         }
       ]
     }

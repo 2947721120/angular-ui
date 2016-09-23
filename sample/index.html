@@ -1,15 +1,15 @@
 <!doctype html>
-<!-- Our uiRouterSample module defined here -->
+<!-- 我们的UI路由器样本模块这里定义 -->
 <html lang="en" ng-app="uiRouterSample">
   <head>
     <meta charset="utf-8">
 
-    <!-- using twitter bootstrap, but of course -->
+    <!-- 使用Twitter的引导，但当然 -->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
-    <!-- styles for ng-animate are located here -->
+    <!-- 样式nganimate都设在这里 -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <!-- Include angular.js, angular-animate.js and angular-ui-router.js-->
+    <!-- 包括 angular.js, angular-animate.js 和angular-ui-router.js-->
     <script src="../lib/angular-1.2.14/angular.js"></script>
     <script src="../lib/angular-1.2.14/angular-animate.js"></script>
     <script src="../release/angular-ui-router.js"></script>
@@ -35,39 +35,39 @@
       <div class="navbar-inner"><div class="container">
 
         <!-- UI的SREF是与一个锚链接链接状态的位置很大的指令。
-             你应该总是在你的链接中使用的用户界面，而不是SREF HREF的，当你想
-             然后导航到一个状态。当点击这个链接将采取申请
-             到'家'的状态。幕后的指令，还增加了正确的href ATTR
-             和url. -->
+             你应该总是在你的链接中使用的用户界面，而不是SREF HREF的，当你想
+             然后导航到一个状态。当点击这个链接将采取申请
+             到'家'的状态。幕后的指令，还增加了正确的href ATTR
+             和url. -->
         <a class="brand" ui-sref="home">ui-router</a>
         <ul class="nav">
 
         <!-- 在这里，你可以看到UI的SREF行动一次。还要注意使用$ state.includes，其中
-             将设置链接“活跃”，例如如果第一个环节，“联系人”或任何对
-             其后裔状态被激活. -->
+             将设置链接“活跃”，例如如果第一个环节，“联系人”或任何对
+             其后裔状态被激活. -->
           <li ng-class="{active: $state.includes('contacts')}"><a ui-sref="contacts.list">联系</a></li>
           <li ui-sref-active="active"><a ui-sref="about">关于</a></li>
         </ul>
 
         <!--这是一个名为UI的视图。 UI的意见没有被命名，但我们会填充此
-             一个来自各种不同的孩子的状态，我们希望一个名称来帮助我们的目标. -->
+             一个来自各种不同的孩子的状态，我们希望一个名称来帮助我们的目标. -->
         <p ui-view="hint" class="navbar-text pull-right"></p>
       </div></div>
     </div>
 
     <!-- 这里是主要的用户界面视图（未命名），并将其直接子的模板填充
-         除非另有明确命名视图的目标。它也采用NG-动画. -->
+         除非另有明确命名视图的目标。它也采用NG-动画. -->
     <div ui-view class="container slide" style="padding-top: 80px;"></div>
 
 
     <hr>
     <pre>
-      <!-- 下面是一些值，以保持眼睛的样品，以了解 $state and $stateParams -->
+      <!-- 下面是一些值，以保持眼睛的样品，以了解 $state 和 $stateParams -->
       $state = {{$state.current.name}}
       $stateParams = {{$stateParams}}
       $state full url = {{ $state.$current.url.source }}
       <!-- $state.$current 是不是一个公共的API，我们用它来
-           显示学习目的的完整URL-->
+           显示学习目的的完整URL-->
     </pre>
   </body>
 </html>

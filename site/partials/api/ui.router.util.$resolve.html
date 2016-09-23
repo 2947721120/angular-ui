@@ -1,12 +1,12 @@
 <a href="https://github.com/angular-ui/ui-router/edit/master/src/resolve.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/resolve.js#L11" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">$resolve</code>
-<div><span class="hint">service in module <code ng:non-bindable="">ui.router.util</code>
+<div><span class="hint">在模块服务 <code ng:non-bindable="">ui.router.util</code>
 </span>
 </div>
 </h1>
-<div><h2 id="description">Description</h2>
+<div><h2 id="description">描述</h2>
 <div class="description"><div class="ui-router-util-resolve-page"><p>管理的承诺（非循环）图形分辨率.</p>
 </div></div>
-<h2 id="dependencies">Dependencies</h2>
+<h2 id="dependencies">依赖</h2>
 <ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
 </li>
 <li><code ng:non-bindable=""><a href="#/api/ng.$injector">$injector</a></code>
@@ -24,60 +24,59 @@
 <li>从指定的 <code>locals</code></li>
 <li>从另一个可调用即这部分 <code>$resolve</code>调用</li>
 <li>从一个从继承了一个可调用 <code>parent</code>拨电至 <code>$resolve</code> 
-(or recursively</li>
-<li>from any ancestor <code>$resolve</code> of that parent).</li>
+（或递归</li>
+<li>从祖先<code>$resolve</code> 该父）.</li>
 </ul>
-<p>The return value of <code>$resolve</code> is a promise for an object that contains 
-(in this order of precedence)</p>
+<p>返回值 <code>$resolve</code> 是包含一个对象的许
+（在优先顺序）</p>
 <ul>
-<li>any <code>locals</code> (if specified)</li>
-<li>the resolved return values of all injectables</li>
-<li>any values inherited from a <code>parent</code> call to <code>$resolve</code> (if specified)</li>
+<li>任何 <code>locals</code> （如果指定）</li>
+<li>所有注射剂的解决返回值</li>
+<li>从继承的任何值<code>parent</code> 调用 <code>$resolve</code> （如果指定）</li>
 </ul>
-<p>The promise will resolve after the <code>parent</code> promise (if any) and all promises 
-returned by injectables have been resolved. If any invocable 
-(or <code>$injector.invoke</code>) throws an exception, or if a promise returned by an 
-invocable is rejected, the <code>$resolve</code> promise is immediately rejected with the 
-same error. A rejection of a <code>parent</code> promise (if specified) will likewise be 
-propagated immediately. Once the <code>$resolve</code> promise has been rejected, no 
-further invocables will be called.</p>
-<p>Cyclic dependencies between invocables are not permitted and will cause <code>$resolve</code>
-to throw an error. As a special case, an injectable can depend on a parameter 
-with the same name as the injectable, which will be fulfilled from the <code>parent</code> 
-injectable of the same name. This allows inherited values to be decorated. 
-Note that in this case any other injectable in the same <code>$resolve</code> with the same
-dependency would see the decorated value, not the inherited value.</p>
-<p>Note that missing dependencies -- unlike cyclic dependencies -- will cause an 
-(asynchronous) rejection of the <code>$resolve</code> promise rather than a (synchronous) 
-exception.</p>
-<p>Invocables are invoked eagerly as soon as all dependencies are available. 
-This is true even for dependencies inherited from a <code>parent</code> call to <code>$resolve</code>.</p>
-<p>As a special case, an invocable can be a string, in which case it is taken to 
-be a service name to be passed to <code>$injector.get()</code>. This is supported primarily 
-for backwards-compatibility with the <code>resolve</code> property of <code>$routeProvider</code> 
-routes.</p>
-</div><h5 id="methods_resolve_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>invocables</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>functions to invoke or
-<code>$injector</code> services to fetch.</p>
-</div></td></tr><tr><td>locals</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>values to make available to the injectables</p>
-</div></td></tr><tr><td>parent</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>a promise returned by another call to <code>$resolve</code>.</p>
-</div></td></tr><tr><td>self</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>the <code>this</code> for the invoked methods</p>
-</div></td></tr></tbody></table><h5 id="methods_resolve_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>Promise for an object that contains the resolved return value
-of all invocables, as well as any inherited and local values.</p>
+<p>该承诺将解决在 <code>parent</code>的承诺（如果有的话）和所有的承诺后，
+通过注射剂退回已得到解决。如果有任何可调用 <code>$injector.invoke</code>)抛出一个异常，或者承诺由返回
+可调用被拒绝， <code>$resolve</code> 承诺会立刻与拒绝
+同样的错误。的拒绝的 <code>parent</code> 承诺（如果指定）将同样是
+立即传播。 一旦 <code>$resolve</code>承诺已被拒绝，没有
+进一步invocables将被称为.</p>
+<p>invocables之间的循环依赖是不允许的，并会导致 <code>$resolve</code>
+抛出一个错误。作为一个特殊的情况下，可注射的可取决于一个参数
+具有相同名称的注射，这将从满足 <code>parent</code> 
+同名注射。这允许继承被装饰值。
+注意，在这种情况下，在相同的任何其它可注射的 <code>$resolve</code>用相同的
+依赖会看到装饰价值，而不是继承值.</p>
+<p>请注意，缺少的依赖关系 - 与循环依赖 - 将导致
+（异步）排斥反应的 <code>$resolve</code>许而不是（同步）
+例外.</p>
+<p>Invocables是只要所有依赖都可以翘首调用。
+这是真实的，即使对于依赖从继承 <code>parent</code>调用 <code>$resolve</code>.</p>
+<p>作为一个特殊的情况下，可调用可以是一个字符串，在这种情况下，它是采取以
+将服务名称要传递给 <code>$injector.get()</code>. 这主要支持
+用于与向后兼容性<code>resolve</code>财产<code>$routeProvider</code> 
+路线.</p>
+</div><h5 id="methods_resolve_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>参数</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>invocables</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>functions to invoke or
+<code>$injector</code> 服务获取.</p>
+</div></td></tr><tr><td>locals</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>值，以提供给注射</p>
+</div></td></tr><tr><td>parent</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>通过另一次调用返回的承诺 <code>$resolve</code>.</p>
+</div></td></tr><tr><td>self</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>the <code>this</code> 对于调用方法</p>
+</div></td></tr></tbody></table><h5 id="methods_resolve_returns">返回</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-resolve-page"><p>答应为包含决心返回值的对象
+所有invocables，以及任何继承和当地的价值观.</p>
 </div></td></tr></table></div>
 </li>
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/resolve.js#L42" class="view-source icon-eye-open"> </a><h3 id="methods_study">study(invocables)</h3>
-<div class="study"><div class="ui-router-util-resolve-study-page"><p>Studies a set of invocables that are likely to be used multiple times.
+<div class="study"><div class="ui-router-util-resolve-study-page"><p>研究中使用的一组可能invocables的多次.
 <pre class="prettyprint linenums">
 $resolve.study(invocables)(locals, parent, self)
 </pre>
-is equivalent to
+相当于
 <pre class="prettyprint linenums">
 $resolve.resolve(invocables, locals, parent, self)
 </pre>
-but the former is more efficient (in fact <code>resolve</code> just calls <code>study</code> 
-internally).</p>
-</div><h5 id="methods_study_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>invocables</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-study-page"><p>Invocable objects</p>
-</div></td></tr></tbody></table><h5 id="methods_study_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-util-resolve-study-page"><p>a function to pass in locals, parent and self</p>
+但前者是更有效的（实际上 <code>resolve</code>只是调用<code>study</code> 
+内部）.</p>
+</div><h5 id="methods_study_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>参数</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>invocables</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-util-resolve-study-page"><p>可调用对象</p>
+</div></td></tr></tbody></table><h5 id="methods_study_returns">返回</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-util-resolve-study-page"><p>功能在本地人，父母和自我传递</p>
 </div></td></tr></table></div>
 </li>
 </ul>
