@@ -3,24 +3,23 @@
     <div class="pa-sidebar well well-small">
       <ul class="nav nav-list">
         <li ng-class="{ active: $state.includes('contacts.list') }"><a ui-sref="contacts.list">All Contacts</a></li>
-        <li class="nav-header">Top Contacts</li>
+        <li class="nav-header">顶部联系</li>
 
-        <!-- This <li> will only add the 'active' class if 'contacts.detail' or its descendants are active
-             AND if it is the link for the active contact (aka contactId) -->
+        <!--这个 <li> 只会增加“活跃”类，如果“contacts.detail'或它的后代是活动的，如果它是链接激活接触（即接触式ID） -->
         <li ng-repeat="contact in contacts | limitTo:2" ui-sref-active="active">
 
-          <!-- Here's a ui-sref that is also providing necessary parameters -->
+          <!-- 下面是还提供必要的参数的用户界面，SREF-->
           <a ui-sref="contacts.detail({contactId:contact.id})">{{contact.name}}</a>
         </li>
       </ul>
       <hr>
-      <button class="btn" ng-click="goToRandom()">Show random contact</button>
+      <button class="btn" ng-click="goToRandom()">显示随机接触</button>
 
-      <!-- Another named view -->
+      <!--另一种命名视图 -->
       <div ui-view="menuTip" class="slide"></div>
     </div>
   </div>
 
-  <!-- Our unnamed main ui-view for this template -->
+  <!-- 我们不愿透露姓名的主UI视此模板 -->
   <div ui-view class="span9 slide"></div>
 </div>

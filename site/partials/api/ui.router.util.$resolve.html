@@ -4,7 +4,7 @@
 </div>
 </h1>
 <div><h2 id="description">Description</h2>
-<div class="description"><div class="ui-router-util-resolve-page"><p>Manages resolution of (acyclic) graphs of promises.</p>
+<div class="description"><div class="ui-router-util-resolve-page"><p>管理的承诺（非循环）图形分辨率.</p>
 </div></div>
 <h2 id="dependencies">Dependencies</h2>
 <ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
@@ -14,16 +14,16 @@
 </ul>
 <div class="member method"><h2 id="methods">Methods</h2>
 <ul class="methods"><li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/resolve.js#L246" class="view-source icon-eye-open"> </a><h3 id="methods_resolve">resolve(invocables, locals, parent, self)</h3>
-<div class="resolve"><div class="ui-router-util-resolve-resolve-page"><p>Resolves a set of invocables. An invocable is a function to be invoked via 
-<code>$injector.invoke()</code>, and can have an arbitrary number of dependencies. 
-An invocable can either return a value directly,
-or a <code>$q</code> promise. If a promise is returned it will be resolved and the 
-resulting value will be used instead. Dependencies of invocables are resolved 
-(in this order of precedence)</p>
+<div class="resolve"><div class="ui-router-util-resolve-resolve-page"><p>解析一组invocables的。一个可调用是通过被调用的函数
+<code>$injector.invoke()</code>,并且可以具有依赖关系的任意数量。
+一个可调用可以直接返回一个值，
+或 <code>$q</code>诺言。如果返回的承诺将得到解决，
+结果值将被用来代替。invocables的依赖得到解决
+（在优先顺序）</p>
 <ul>
-<li>from the specified <code>locals</code></li>
-<li>from another invocable that is part of this <code>$resolve</code> call</li>
-<li>from an invocable that is inherited from a <code>parent</code> call to <code>$resolve</code> 
+<li>从指定的 <code>locals</code></li>
+<li>从另一个可调用即这部分 <code>$resolve</code>调用</li>
+<li>从一个从继承了一个可调用 <code>parent</code>拨电至 <code>$resolve</code> 
 (or recursively</li>
 <li>from any ancestor <code>$resolve</code> of that parent).</li>
 </ul>

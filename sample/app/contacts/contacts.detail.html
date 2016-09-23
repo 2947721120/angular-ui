@@ -3,15 +3,12 @@
   <ul>
     <li ng-repeat="item in contact.items">
 
-      <!-- Here's another ui-sref except THIS time we are passing parameters
-           AND inheriting parameters from active ancestor states. So we don't
-           need to resupply the contactId parameter. -->
+      <!--这里还有一个UI的SREF除了我们传递的参数和参数继承从活动的祖先状态这个时候。所以我们并不需要补给的接触式ID参数. -->
       <a ui-sref="contacts.detail.item({itemId:item.id})">{{item.type}}</a>
     </li>
   </ul>
   <div ui-view class="slide">
-    <!-- Example of default content. This content will be replace as soon as
-         this ui-view is populate with a template -->
-    <small class="muted">Click on a contact item to view and/or edit it.</small>
+    <!-- 默认内容例子。此内容将尽快此UI视图填充了一个模板替换-->
+    <small class="muted">点击联系人项来查看和/或编辑.</small>
   </div>
 </div>

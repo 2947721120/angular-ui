@@ -2,7 +2,7 @@ angular.module('uiRouterSample.contacts.service', [
 
 ])
 
-// A RESTful factory for retrieving contacts from 'contacts.json'
+//一个RESTful工厂从检索联系人 'contacts.json'
 .factory('contacts', ['$http', 'utils', function ($http, utils) {
   var path = 'assets/contacts.json';
   var contacts = $http.get(path).then(function (resp) {

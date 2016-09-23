@@ -2,29 +2,29 @@
 <div><span class="hint"></span>
 </div>
 </h1>
-<div><h2 id="dependencies">Dependencies</h2>
-<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ui.router.state">state</a></code>
+<div><h2 id="dependencies">依赖</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ui.router.state">状况</a></code>
 </li>
 </ul>
 <div class="ui-router-page"><h2 id="uirouter">ui.router</h2>
-<h3 id="uirouter_the-main-module-for-uirouter">The main module for ui.router</h3>
-<p>There are several sub-modules included with the ui.router module, however only this module is needed
-as a dependency within your angular app. The other modules are for organization purposes. </p>
-<p>The modules are:</p>
+<h3 id="uirouter_the-main-module-for-uirouter">对于ui.router主模块</h3>
+<p>有附带ui.router模块几个子模块，但只需要这个模块
+作为您的角应用程序中的依赖。其他模块是用于组织目的. </p>
+<p>模块是:</p>
 <ul>
-<li>ui.router - the main &quot;umbrella&quot; module</li>
+<li>ui.router - the main &quot;umbrella&quot; 模</li>
 <li>ui.router.router - </li>
 </ul>
-<p><em>You&#39;ll need to include <strong>only</strong> this module as the dependency within your angular app.</em></p>
+<p><em>你需要包括 <strong>only</strong>该模块为您的角度应用中的相关性.</em></p>
 <pre class="prettyprint linenums">
 &lt;!doctype html&gt;
 &lt;html ng-app="myApp"&gt;
 &lt;head&gt;
   &lt;script src="js/angular.js"&gt;&lt;/script&gt;
-  &lt;!-- Include the ui-router script --&gt;
+  &lt;!-- 包括： ui-router script --&gt;
   &lt;script src="js/angular-ui-router.min.js"&gt;&lt;/script&gt;
   &lt;script&gt;
-    // ...and add 'ui.router' as a dependency
+    // ...并添加 'ui.router'作为一个依赖
     var myApp = angular.module('myApp', ['ui.router']);
   &lt;/script&gt;
 &lt;/head&gt;
