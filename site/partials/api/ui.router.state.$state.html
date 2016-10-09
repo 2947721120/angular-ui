@@ -1,5 +1,5 @@
 <a href="https://github.com/angular-ui/ui-router/edit/master/src/state.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L714" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">$state</code>
-<div><span class="hint">service in module <code ng:non-bindable="">ui.router.state</code>
+<div><span class="hint">在模块服务<code ng:non-bindable="">ui.router.state</code>
 </span>
 </div>
 </h1>
@@ -27,7 +27,7 @@ you&#39;re coming from.</p>
 <div class="member method"><h2 id="methods">Methods</h2>
 <ul class="methods"><li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L1379" class="view-source icon-eye-open"> </a><h3 id="methods_get">get(stateOrName, context)</h3>
 <div class="get"><div class="ui-router-state-state-get-page"><p>Returns the state configuration object for any specific state or all states.</p>
-</div><h5 id="methods_get_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-get-page"><p>(absolute or relative) If provided, will only get the config for
+</div><h5 id="methods_get_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-get-page"><p>(absolute or relative) If provided, will only get the config for
 the requested state. If not provided, returns an array of ALL state configs.</p>
 </div></td></tr><tr><td>context <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-get-page"><p>When stateOrName is a relative state reference, the state will be retrieved relative to context.</p>
 </div></td></tr></tbody></table><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object|Array</a></td><td><div class="ui-router-state-state-get-page"><p>State configuration object or array of all objects.</p>
@@ -40,7 +40,7 @@ the requested state. If not provided, returns an array of ALL state configs.</p>
 This allows you to easily use an absolute or relative to path and specify 
 only the parameters you&#39;d like to update (while letting unspecified parameters 
 inherit from the currently active ancestor states).</p>
-</div><h5 id="methods_go_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>to</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-go-page"><p>Absolute state name or relative state path. Some examples:</p>
+</div><h5 id="methods_go_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>to</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-go-page"><p>Absolute state name or relative state path. Some examples:</p>
 <ul>
 <li><code>$state.go(&#39;contact.detail&#39;)</code> - will go to the <code>contact.detail</code> state</li>
 <li><code>$state.go(&#39;^&#39;)</code> - will go to a parent state</li>
@@ -81,7 +81,7 @@ when a <code>$stateNotFound</code> <code>event.retry</code> promise errors.</li>
 <li>&#39;transition failed&#39; - when a state has been unsuccessfully found after 2 tries.</li>
 <li><em>resolve error</em> - when an error has occurred with a <code>resolve</code></li>
 </ul>
-</div></td></tr></table><h4 id="methods_go_example">Example</h4>
+</div></td></tr></table><h4 id="methods_go_example">例</h4>
 <div class="example"><div class="ui-router-state-state-go-page"><pre class="prettyprint linenums">
 var app = angular.module('app', ['ui.router']);
 
@@ -97,7 +97,7 @@ app.controller('ctrl', function ($scope, $state) {
 </li>
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L1343" class="view-source icon-eye-open"> </a><h3 id="methods_href">href(stateOrName, params, options)</h3>
 <div class="href"><div class="ui-router-state-state-href-page"><p>A url generation method that returns the compiled url for the given state populated with the given params.</p>
-</div><h5 id="methods_href_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-href-page"><p>The state name or state object you&#39;d like to generate a url from.</p>
+</div><h5 id="methods_href_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-href-page"><p>The state name or state object you&#39;d like to generate a url from.</p>
 </div></td></tr><tr><td>params <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-href-page"><p>An object of parameter values to fill the state&#39;s required parameters.</p>
 </div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-href-page"><p>Options object. The options are:</p>
 <ul>
@@ -110,7 +110,7 @@ app.controller('ctrl', function ($scope, $state) {
 <li><strong><code>absolute</code></strong> - {boolean=false},  If true will generate an absolute url, e.g. &quot;<a href="http://www.example.com/fullurl">http://www.example.com/fullurl</a>&quot;.</li>
 </ul>
 </div></td></tr></tbody></table><h5 id="methods_href_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-href-page"><p>compiled state url</p>
-</div></td></tr></table><h4 id="methods_href_example">Example</h4>
+</div></td></tr></table><h4 id="methods_href_example">例</h4>
 <div class="example"><div class="ui-router-state-state-href-page"><pre class="prettyprint linenums">
 expect($state.href("about.person", { person: "bob" })).toEqual("/about/bob");
 </pre>
@@ -121,7 +121,7 @@ expect($state.href("about.person", { person: "bob" })).toEqual("/about/bob");
 <div class="includes"><div class="ui-router-state-state-includes-page"><p>A method to determine if the current active state is equal to or is the child of the
 state stateName. If any params are passed then they will be tested for a match as well.
 Not all the parameters need to be passed, just the ones you&#39;d like to test for equality.</p>
-</div><h5 id="methods_includes_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-includes-page"><p>A partial name, relative name, or glob pattern
+</div><h5 id="methods_includes_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-includes-page"><p>A partial name, relative name, or glob pattern
 to be searched for within the current state name.</p>
 </div></td></tr><tr><td>params <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-includes-page"><p>A param object, e.g. <code>{sectionId: section.id}</code>,
 that you&#39;d like to test against the current active state.</p>
@@ -131,7 +131,7 @@ that you&#39;d like to test against the current active state.</p>
 .includes will test relative to <code>options.relative</code> state (or name).</li>
 </ul>
 </div></td></tr></tbody></table><h5 id="methods_includes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-state-state-includes-page"><p>Returns true if it does include the state</p>
-</div></td></tr></table><h4 id="methods_includes_example">Example</h4>
+</div></td></tr></table><h4 id="methods_includes_example">例</h4>
 <div class="example"><div class="ui-router-state-state-includes-page"><p>Partial and relative names
 <pre class="prettyprint linenums">
 $state.$current.name = 'contacts.details.item';
@@ -167,7 +167,7 @@ $state.includes("item.**"); // returns false
 but only checks for the full state name. If params is supplied then it will be
 tested for strict equality against the current active params object, so all params
 must match with none missing and no extras.</p>
-</div><h5 id="methods_is_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-is-page"><p>The state name (absolute or relative) or state object you&#39;d like to check.</p>
+</div><h5 id="methods_is_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>stateOrName</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-is-page"><p>The state name (absolute or relative) or state object you&#39;d like to check.</p>
 </div></td></tr><tr><td>params <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-is-page"><p>A param object, e.g. <code>{sectionId: section.id}</code>, that you&#39;d like
 to test against the current active state.</p>
 </div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-is-page"><p>An options object.  The options are:</p>
@@ -176,7 +176,7 @@ to test against the current active state.</p>
 test relative to <code>options.relative</code> state (or name).</li>
 </ul>
 </div></td></tr></tbody></table><h5 id="methods_is_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-state-state-is-page"><p>Returns true if it is the state.</p>
-</div></td></tr></table><h4 id="methods_is_example">Example</h4>
+</div></td></tr></table><h4 id="methods_is_example">例</h4>
 <div class="example"><div class="ui-router-state-state-is-page"><pre class="prettyprint linenums">
 $state.$current.name = 'contacts.details.item';
 
@@ -194,12 +194,12 @@ $state.is(contactDetailItemStateObject); // returns true
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L849" class="view-source icon-eye-open"> </a><h3 id="methods_reload">reload(state)</h3>
 <div class="reload"><div class="ui-router-state-state-reload-page"><p>A method that force reloads the current state. All resolves are re-resolved,
 controllers reinstantiated, and events re-fired.</p>
-</div><h5 id="methods_reload_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string=</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-reload-page"><ul>
+</div><h5 id="methods_reload_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string=</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-reload-page"><ul>
 <li>A state name or a state object, which is the root of the resolves to be re-resolved.</li>
 </ul>
 </div></td></tr></tbody></table><h5 id="methods_reload_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="ui-router-state-state-reload-page"><p>A promise representing the state of the new transition. See
 <a href="#/api/ui.router.state.$state#methods_go">$state.go</a>.</p>
-</div></td></tr></table><h4 id="methods_reload_example">Example</h4>
+</div></td></tr></table><h4 id="methods_reload_example">例</h4>
 <div class="example"><div class="ui-router-state-state-reload-page"><pre class="prettyprint linenums">
 //assuming app application consists of 3 states: 'contacts', 'contacts.detail', 'contacts.detail.item' 
 //and current state is 'contacts.detail.item'
@@ -224,7 +224,7 @@ $state.transitionTo($state.current, $stateParams, {
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L965" class="view-source icon-eye-open"> </a><h3 id="methods_transitionto">transitionTo(to, toParams, options)</h3>
 <div class="transitionto"><div class="ui-router-state-state-transitionto-page"><p>Low-level method for transitioning to a new state. <a href="#/api/ui.router.state.$state#methods_go">$state.go</a>
 uses <code>transitionTo</code> internally. <code>$state.go</code> is recommended in most situations.</p>
-</div><h5 id="methods_transitionto_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>to</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-transitionto-page"><p>State name.</p>
+</div><h5 id="methods_transitionto_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>to</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-state-transitionto-page"><p>State name.</p>
 </div></td></tr><tr><td>toParams <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-transitionto-page"><p>A map of the parameters that will be sent to the state,
 will populate $stateParams.</p>
 </div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-state-transitionto-page"><p>Options object. The options are:</p>
@@ -243,7 +243,7 @@ will populate $stateParams.</p>
 </ul>
 </div></td></tr></tbody></table><h5 id="methods_transitionto_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="ui-router-state-state-transitionto-page"><p>A promise representing the state of the new transition. See
 <a href="#/api/ui.router.state.$state#methods_go">$state.go</a>.</p>
-</div></td></tr></table><h4 id="methods_transitionto_example">Example</h4>
+</div></td></tr></table><h4 id="methods_transitionto_example">例</h4>
 <div class="example"><div class="ui-router-state-state-transitionto-page"><pre class="prettyprint linenums">
 var app = angular.module('app', ['ui.router']);
 
@@ -288,7 +288,7 @@ catch <strong>ALL</strong> errors.</p>
 <div class="inline"><h4 id="events_$statechangeerror_target">Target:</h4>
 <div class="target">root scope</div>
 </div>
-<h5 id="events_$statechangeerror_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangeerror-page"><p>Event object.</p>
+<h5 id="events_$statechangeerror_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangeerror-page"><p>Event object.</p>
 </div></td></tr><tr><td>toState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statechangeerror-page"><p>The state being transitioned to.</p>
 </div></td></tr><tr><td>toParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangeerror-page"><p>The params supplied to the <code>toState</code>.</p>
 </div></td></tr><tr><td>fromState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statechangeerror-page"><p>The current state, pre-transition.</p>
@@ -306,12 +306,12 @@ rejected with a <code>&#39;transition prevented&#39;</code> value.</p>
 <div class="inline"><h4 id="events_$statechangestart_target">Target:</h4>
 <div class="target">root scope</div>
 </div>
-<h5 id="events_$statechangestart_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangestart-page"><p>Event object.</p>
+<h5 id="events_$statechangestart_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangestart-page"><p>Event object.</p>
 </div></td></tr><tr><td>toState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statechangestart-page"><p>The state being transitioned to.</p>
 </div></td></tr><tr><td>toParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangestart-page"><p>The params supplied to the <code>toState</code>.</p>
 </div></td></tr><tr><td>fromState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statechangestart-page"><p>The current state, pre-transition.</p>
 </div></td></tr><tr><td>fromParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangestart-page"><p>The params supplied to the <code>fromState</code>.</p>
-</div></td></tr></tbody></table><h4 id="events_$statechangestart_example">Example</h4>
+</div></td></tr></tbody></table><h4 id="events_$statechangestart_example">例</h4>
 <div class="example"><div class="ui-router-state-state-statechangestart-page"><pre class="prettyprint linenums">
 $rootScope.$on('$stateChangeStart',
 function(event, toState, toParams, fromState, fromParams){
@@ -331,7 +331,7 @@ function(event, toState, toParams, fromState, fromParams){
 <div class="inline"><h4 id="events_$statechangesuccess_target">Target:</h4>
 <div class="target">root scope</div>
 </div>
-<h5 id="events_$statechangesuccess_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangesuccess-page"><p>Event object.</p>
+<h5 id="events_$statechangesuccess_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangesuccess-page"><p>Event object.</p>
 </div></td></tr><tr><td>toState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statechangesuccess-page"><p>The state being transitioned to.</p>
 </div></td></tr><tr><td>toParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statechangesuccess-page"><p>The params supplied to the <code>toState</code>.</p>
 </div></td></tr><tr><td>fromState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statechangesuccess-page"><p>The current state, pre-transition.</p>
@@ -350,11 +350,11 @@ transition and the promise returned from <code>go</code> will be rejected with a
 <div class="inline"><h4 id="events_$statenotfound_target">Target:</h4>
 <div class="target">root scope</div>
 </div>
-<h5 id="events_$statenotfound_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statenotfound-page"><p>Event object.</p>
+<h5 id="events_$statenotfound_target_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statenotfound-page"><p>Event object.</p>
 </div></td></tr><tr><td>unfoundState</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statenotfound-page"><p>Unfound State information. Contains: <code>to, toParams, options</code> properties.</p>
 </div></td></tr><tr><td>fromState</td><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-state-statenotfound-page"><p>Current state object.</p>
 </div></td></tr><tr><td>fromParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-state-statenotfound-page"><p>Current state params.</p>
-</div></td></tr></tbody></table><h4 id="events_$statenotfound_example">Example</h4>
+</div></td></tr></tbody></table><h4 id="events_$statenotfound_example">例</h4>
 <div class="example"><div class="ui-router-state-state-statenotfound-page"><pre class="prettyprint linenums">
 // somewhere, assume lazy.state has not been defined
 $state.go("lazy.state", {a:1, b:2}, {inherit:false});

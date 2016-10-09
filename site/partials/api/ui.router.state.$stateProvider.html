@@ -1,5 +1,5 @@
 <a href="https://github.com/angular-ui/ui-router/edit/master/src/state.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L22" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">$stateProvider</code>
-<div><span class="hint">service in module <code ng:non-bindable="">ui.router.state</code>
+<div><span class="hint">在模块服务<code ng:non-bindable="">ui.router.state</code>
 </span>
 </div>
 </h1>
@@ -62,7 +62,7 @@ Needed for state activation.</li>
 <li><strong>includes</strong> <code>{object}</code> - returns an object that includes every state that 
 would pass a <code>$state.includes()</code> test.</li>
 </ul>
-</div><h5 id="methods_decorator_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>The name of the builder function to decorate.</p>
+</div><h5 id="methods_decorator_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>The name of the builder function to decorate.</p>
 </div></td></tr><tr><td>func</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>A function that is responsible for decorating the original
 builder function. The function receives two parameters:</p>
 <ul>
@@ -70,7 +70,7 @@ builder function. The function receives two parameters:</p>
 <li><code>{object}</code> - super - The original builder function.</li>
 </ul>
 </div></td></tr></tbody></table><h5 id="methods_decorator_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>$stateProvider - $stateProvider instance</p>
-</div></td></tr></table><h4 id="methods_decorator_example">Example</h4>
+</div></td></tr></table><h4 id="methods_decorator_example">例</h4>
 <div class="example"><div class="ui-router-state-stateprovider-decorator-page"><pre class="prettyprint linenums">
 // Override the internal 'views' builder with a function that takes the state
 // definition, and a reference to the internal function being overridden:
@@ -105,10 +105,10 @@ $state.go('home');
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L681" class="view-source icon-eye-open"> </a><h3 id="methods_state">state(name, stateConfig)</h3>
 <div class="state"><div class="ui-router-state-stateprovider-state-page"><p>Registers a state configuration under a given state name. The stateConfig object
 has the following acceptable properties.</p>
-</div><h5 id="methods_state_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-state-page"><p>A unique state name, e.g. &quot;home&quot;, &quot;about&quot;, &quot;contacts&quot;.
+</div><h5 id="methods_state_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-state-page"><p>A unique state name, e.g. &quot;home&quot;, &quot;about&quot;, &quot;contacts&quot;.
 To create a parent/child state use a dot, e.g. &quot;about.sales&quot;, &quot;home.newest&quot;.</p>
 </div></td></tr><tr><td>stateConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-stateprovider-state-page"><p>State configuration object.</p>
-</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>template <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-stateprovider-state-page"><p><a id='template'></a>
+</div><table><thead><tr><th>Property</th><th>类型</th><th>Details</th></tr></thead><tbody><tr><td>template <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-stateprovider-state-page"><p><a id='template'></a>
 html template as a string or a function that returns
 an html template as a string which should be used by the uiView directives. This property 
 takes precedence over templateUrl.</p>
@@ -335,7 +335,7 @@ params: {
       squash: "~"
 } }
 </pre>
-</div></td></tr></tbody></table></td></tr></tbody></table><h4 id="methods_state_example">Example</h4>
+</div></td></tr></tbody></table></td></tr></tbody></table><h4 id="methods_state_example">例</h4>
 <div class="example"><div class="ui-router-state-stateprovider-state-page"><pre class="prettyprint linenums">
 // Some state name examples
 

@@ -41,7 +41,7 @@ $bob = $urlRouter.href(new UrlMatcher("/about/:person"), {
 当你需要使用此方法非常有用 <code>preventDefault()</code> 在 <code>$locationChangeSuccess</code> 事件，
 执行一些自定义逻辑（路由保护，身份验证，配置，重定向等），然后最后进行
 与通过调用过渡 <code>$urlRouter.sync()</code>.</p>
-</div><h4 id="methods_sync_example">Example</h4>
+</div><h4 id="methods_sync_example">例</h4>
 <div class="example"><div class="ui-router-router-urlrouter-sync-page"><pre class="prettyprint linenums">
 angular.module('app', ['ui.router'])
   .run(function($rootScope, $urlRouter) {
