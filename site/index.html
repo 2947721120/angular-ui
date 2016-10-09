@@ -8,14 +8,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="Description"
         content="AngularJS是HTML本来，如果它被设计用于构建Web的应用程序。
-                 与数据绑定，MVC，依赖注入和伟大的声明模板
-                 可测试性的故事全部用纯客户端实现 JavaScript!">
+                 与数据绑定，MVC，依赖注入和伟大的声明模板
+                 可测试性的故事全部用纯客户端实现 JavaScript!">
   <meta name="fragment" content="!">
   <title ng-bind-template="UI Router: {{partialTitle}}">Docs</title>
   <script type="text/javascript">
     //动态添加基础标签以及CSS和JavaScript文件。
-    //我们不能添加CSS/ JS通常的方式，因为有些浏览器（FF）的预取热切资源
-    //前基本属性添加，造成404和文档应用非常缓慢的加载。
+    //我们不能添加CSS/ JS通常的方式，因为有些浏览器（FF）的预取热切资源
+    //前基本属性添加，造成404和文档应用非常缓慢的加载。
     (function() {
       var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
           origin, baseUrl, rUrl = /(\/?#!\/.*|\/(api)\/?(\?.*)*|\/index[^\.]*\.html.*)$/,
@@ -87,7 +87,7 @@
         <div class="container">
           
           
-            <a  class="brand">UI 路由r</a>
+            <a  class="brand">UI 路由</a>
           
           <ul class="nav">
             <li ng-repeat="(url, name) in sections" ng-class="{active: isActivePath(url)}">
@@ -180,7 +180,7 @@
               <a class="guide">服务</a>
             </li>
             <li ng-repeat="service in module.services track by  (service.instance.url || service.provider.url)" ng-class="navClass(service.instance, service.provider)" class="api-list-item expand">
-              <a ng-show="service.provider" class="pull-right" href="{{service.provider.url}}" tabindex="2"><i class="icon-cog"></i>Provider</a>
+              <a ng-show="service.provider" class="pull-right" href="{{service.provider.url}}" tabindex="2"><i class="icon-cog"></i>供应商</a>
               <a href="{{service.instance ? service.instance.url : service.provider.url}}" tabindex="2">{{service.name}}</a>
             </li>
 

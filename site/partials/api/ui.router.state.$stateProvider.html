@@ -3,7 +3,7 @@
 </span>
 </div>
 </h1>
-<div><h2 id="description">Description</h2>
+<div><h2 id="description">说明</h2>
 <div class="description"><div class="ui-router-state-stateprovider-page"><p>The new <code>$stateProvider</code> works similar to Angular&#39;s v1 router, but it focuses purely
 on state.</p>
 <p>A state corresponds to a &quot;place&quot; in the application in terms of the overall UI and
@@ -62,7 +62,7 @@ Needed for state activation.</li>
 <li><strong>includes</strong> <code>{object}</code> - returns an object that includes every state that 
 would pass a <code>$state.includes()</code> test.</li>
 </ul>
-</div><h5 id="methods_decorator_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>The name of the builder function to decorate.</p>
+</div><h5 id="methods_decorator_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>The name of the builder function to decorate.</p>
 </div></td></tr><tr><td>func</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-stateprovider-decorator-page"><p>A function that is responsible for decorating the original
 builder function. The function receives two parameters:</p>
 <ul>
@@ -105,7 +105,7 @@ $state.go('home');
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/state.js#L681" class="view-source icon-eye-open"> </a><h3 id="methods_state">state(name, stateConfig)</h3>
 <div class="state"><div class="ui-router-state-stateprovider-state-page"><p>Registers a state configuration under a given state name. The stateConfig object
 has the following acceptable properties.</p>
-</div><h5 id="methods_state_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-state-page"><p>A unique state name, e.g. &quot;home&quot;, &quot;about&quot;, &quot;contacts&quot;.
+</div><h5 id="methods_state_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-stateprovider-state-page"><p>A unique state name, e.g. &quot;home&quot;, &quot;about&quot;, &quot;contacts&quot;.
 To create a parent/child state use a dot, e.g. &quot;about.sales&quot;, &quot;home.newest&quot;.</p>
 </div></td></tr><tr><td>stateConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-stateprovider-state-page"><p>State configuration object.</p>
 </div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>template <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-stateprovider-state-page"><p><a id='template'></a>

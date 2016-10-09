@@ -12,27 +12,27 @@ the matched parameters returned by <a href="#/api/ui.router.util.type:UrlMatcher
 <p>Path parameter placeholders can be specified using simple colon/catch-all syntax or curly brace
 syntax, which optionally allows a regular expression for the parameter to be specified:</p>
 <ul>
-<li><code>&#39;:&#39;</code> name - colon placeholder</li>
-<li><code>&#39;*&#39;</code> name - catch-all placeholder</li>
-<li><code>&#39;{&#39; name &#39;}&#39;</code> - curly placeholder</li>
-<li><code>&#39;{&#39; name &#39;:&#39; regexp|type &#39;}&#39;</code> - curly placeholder with regexp or type name. Should the
-regexp itself contain curly braces, they must be in matched pairs or escaped with a backslash.</li>
+<li><code>&#39;:&#39;</code> name -占位符</li>
+<li><code>&#39;*&#39;</code> name - 包罗万象的占位符</li>
+<li><code>&#39;{&#39; name &#39;}&#39;</code> -卷曲的占位符</li>
+<li><code>&#39;{&#39; name &#39;:&#39; regexp|type &#39;}&#39;</code> - 卷曲的占位符正则表达式或类型名。如若
+正则表达式本身包含大括号，它们必须是成对或以反斜线.</li>
 </ul>
-<p>Parameter names may contain only word characters (latin letters, digits, and underscore) and
-must be unique within the pattern (across both path and search parameters). For colon
-placeholders or curly placeholders without an explicit regexp, a path parameter matches any
-number of characters other than &#39;/&#39;. For catch-all placeholders the path parameter matches
-any number of characters.</p>
+<p>参数名称可能只包含文字字符（拉丁字母，数字和下划线）和
+必须在图案（跨两个路径和搜索参数）中是唯一的。对于结肠癌
+占位符或卷曲的占位符没有明确的正则表达式，路径参数相匹配的任何
+比其他字符数 &#39;/&#39;. 对于包罗万象的占位符的路径参数相匹配
+任意数目的字符.</p>
 <p>Examples:</p>
 <ul>
-<li><code>&#39;/hello/&#39;</code> - Matches only if the path is exactly &#39;/hello/&#39;. There is no special treatment for
-trailing slashes, and patterns have to match the entire path, not just a prefix.</li>
+<li><code>&#39;/hello/&#39;</code> - 仅匹配如果路径是完全 &#39;/hello/&#39;. 没有特殊的治疗方法
+尾随斜线和模式已经相匹配的完整路径，而不只是一个前缀.</li>
 <li><code>&#39;/user/:id&#39;</code> - Matches &#39;/user/bob&#39; or &#39;/user/1234!!!&#39; or even &#39;/user/&#39; but not &#39;/user&#39; or
-&#39;/user/bob/details&#39;. The second path segment will be captured as the parameter &#39;id&#39;.</li>
-<li><code>&#39;/user/{id}&#39;</code> - Same as the previous example, but using curly brace syntax.</li>
-<li><code>&#39;/user/{id:[^/]*}&#39;</code> - Same as the previous example.</li>
-<li><code>&#39;/user/{id:[0-9a-fA-F]{1,8}}&#39;</code> - Similar to the previous example, but only matches if the id
-parameter consists of 1 to 8 hex digits.</li>
+&#39;/user/bob/details&#39;. 第二路径段将被捕获作为参数 &#39;id&#39;.</li>
+<li><code>&#39;/user/{id}&#39;</code> - 同前面的例子，但使用大括号语法.</li>
+<li><code>&#39;/user/{id:[^/]*}&#39;</code> -同样如前面的例子.</li>
+<li><code>&#39;/user/{id:[0-9a-fA-F]{1,8}}&#39;</code> - 类似于前面的例子，但如果ID只匹配
+参数由1至8个十六进制数字.</li>
 <li><code>&#39;/files/{path:.*}&#39;</code> - Matches any URL starting with &#39;/files/&#39; and captures the rest of the
 path into the parameter &#39;path&#39;.</li>
 <li><code>&#39;/files/*path&#39;</code> - ditto.</li>
@@ -40,9 +40,9 @@ path into the parameter &#39;path&#39;.</li>
 in the built-in  <code>date</code> Type matches <code>2014-11-12</code>) and provides a Date object in $stateParams.start</li>
 </ul>
 </div></div>
-<h2 id="usage">Usage</h2>
+<h2 id="usage">用法</h2>
 <div class="usage"><pre class="prettyprint linenums">UrlMatcher(pattern, config[, parentMatcher]);</pre>
-<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pattern</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-page"><p>The pattern to compile into a matcher.</p>
+<h4 id="usage_parameters">参数</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pattern</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-page"><p>The pattern to compile into a matcher.</p>
 </div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-page"><p>A configuration object hash:</p>
 </div></td></tr><tr><td>parentMatcher <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-page"><p>Used to concatenate the pattern/config onto
 an existing UrlMatcher</p>
@@ -58,7 +58,7 @@ an existing UrlMatcher</p>
 search parameters of the specified pattern to this pattern. The current pattern is not
 modified. This can be understood as creating a pattern for URLs that are relative to (or
 suffixes of) the current pattern.</p>
-</div><h5 id="methods_concat_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pattern</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-concat-page"><p>The pattern to append.</p>
+</div><h5 id="methods_concat_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pattern</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-concat-page"><p>The pattern to append.</p>
 </div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-concat-page"><p>An object hash of the configuration for the matcher.</p>
 </div></td></tr></tbody></table><h5 id="methods_concat_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-urlmatcher">UrlMatcher</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-concat-page"><p>A matcher for the concatenated pattern.</p>
 </div></td></tr></table><h4 id="methods_concat_example">Example</h4>
@@ -76,7 +76,7 @@ parameter values, or null if the path does not match. The returned object contai
 of any search parameters that are mentioned in the pattern, but their value may be null if
 they are not present in <code>searchParams</code>. This means that search parameters are always treated
 as optional.</p>
-</div><h5 id="methods_exec_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>path</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-exec-page"><p>The URL path to match, e.g. <code>$location.path()</code>.</p>
+</div><h5 id="methods_exec_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>path</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-exec-page"><p>The URL path to match, e.g. <code>$location.path()</code>.</p>
 </div></td></tr><tr><td>searchParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-exec-page"><p>URL search parameters, e.g. <code>$location.search()</code>.</p>
 </div></td></tr></tbody></table><h5 id="methods_exec_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-exec-page"><p>The captured parameter values.</p>
 </div></td></tr></table><h4 id="methods_exec_example">Example</h4>
@@ -93,7 +93,7 @@ new UrlMatcher('/user/{id}?q&r').exec('/user/bob', {
 <div class="format"><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-format-page"><p>Creates a URL that matches this pattern by substituting the specified values
 for the path and search parameters. Null values for path parameters are
 treated as empty strings.</p>
-</div><h5 id="methods_format_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-format-page"><p>the values to substitute for the parameters in this pattern.</p>
+</div><h5 id="methods_format_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-format-page"><p>the values to substitute for the parameters in this pattern.</p>
 </div></td></tr></tbody></table><h5 id="methods_format_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-format-page"><p>the formatted URL (path and optionally search part).</p>
 </div></td></tr></table><h4 id="methods_format_example">Example</h4>
 <div class="example"><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-format-page"><pre class="prettyprint linenums">
@@ -112,7 +112,7 @@ pattern has no parameters, an empty array is returned.</p>
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlMatcherFactory.js#L315" class="view-source icon-eye-open"> </a><h3 id="methods_validates">validates(params)</h3>
 <div class="validates"><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-validates-page"><p>Checks an object hash of parameters to validate their correctness according to the parameter
 types of this <code>UrlMatcher</code>.</p>
-</div><h5 id="methods_validates_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-validates-page"><p>The object hash of parameters to validate.</p>
+</div><h5 id="methods_validates_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-validates-page"><p>The object hash of parameters to validate.</p>
 </div></td></tr></tbody></table><h5 id="methods_validates_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-util-type-page ui-router-util-type-urlmatcher-validates-page"><p>Returns <code>true</code> if <code>params</code> validates, otherwise <code>false</code>.</p>
 </div></td></tr></table></div>
 </li>

@@ -1,32 +1,32 @@
-<a href="https://github.com/angular-ui/ui-router/edit/master/src/urlRouter.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlRouter.js#L17" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">$urlRouterProvider</code>
-<div><span class="hint">service in module <code ng:non-bindable="">ui.router.router</code>
+<a href="https://github.com/angular-ui/ui-router/edit/master/src/urlRouter.js" class="improve-docs"><i class="icon-edit"> </i>提高这个文档</a><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlRouter.js#L17" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">$urlRouterProvider</code>
+<div><span class="hint">在模块服务 <code ng:non-bindable="">ui.router.router</code>
 </span>
 </div>
 </h1>
-<div><h2 id="description">Description</h2>
-<div class="description"><div class="ui-router-router-urlrouterprovider-page"><p><code>$urlRouterProvider</code> has the responsibility of watching <code>$location</code>. 
-When <code>$location</code> changes it runs through a list of rules one by one until a 
-match is found. <code>$urlRouterProvider</code> is used behind the scenes anytime you specify 
-a url in a state configuration. All urls are compiled into a UrlMatcher object.</p>
-<p>There are several methods on <code>$urlRouterProvider</code> that make it useful to use directly
-in your module config.</p>
+<div><h2 id="description">描述</h2>
+<div class="description"><div class="ui-router-router-urlrouterprovider-page"><p><code>$urlRouterProvider</code> 有观看的责任 <code>$location</code>. 
+其中<code>$location</code> 改变它通过一个规则列表，由一个运行，直到
+找到匹配. <code>$urlRouterProvider</code> 使用幕后随时随地您指定
+在一个国家配置的URL。所有URL被编译成一个网址匹配对象.</p>
+<p>有关于<code>$urlRouterProvider</code>的几种方法，使其可直接使用
+在你的模块配置.</p>
 </div></div>
-<h2 id="dependencies">Dependencies</h2>
+<h2 id="dependencies">依赖</h2>
 <ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ui.router.util.$urlMatcherFactoryProvider">$urlMatcherFactoryProvider</a></code>
 </li>
 <li><code ng:non-bindable=""><a href="#/api/ng.$locationProvider">$locationProvider</a></code>
 </li>
 </ul>
-<div class="member method"><h2 id="methods">Methods</h2>
-<ul class="methods"><li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlRouter.js#L249" class="view-source icon-eye-open"> </a><h3 id="methods_deferintercept">deferIntercept(defer)</h3>
-<div class="deferintercept"><div class="ui-router-router-urlrouterprovider-deferintercept-page"><p>Disables (or enables) deferring location change interception.</p>
-<p>If you wish to customize the behavior of syncing the URL (for example, if you wish to
-defer a transition but maintain the current URL), call this method at configuration time.
-Then, at run time, call <code>$urlRouter.listen()</code> after you have configured your own
-<code>$locationChangeSuccess</code> event handler.</p>
-</div><h5 id="methods_deferintercept_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>defer</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-router-urlrouterprovider-deferintercept-page"><p>Indicates whether to defer location change interception. Passing
+<div class="member method"><h2 id="methods">方法</h2>
+<ul class="methods"><li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlRouter.js#L249" class="view-source icon-eye-open"> </a><h3 id="methods_deferintercept">deferIntercept（延迟）</h3>
+<div class="deferintercept"><div class="ui-router-router-urlrouterprovider-deferintercept-page"><p>禁用（或启用）推迟位置变化拦截.</p>
+<p>如果您想自定义读取URL（例如的行为，如果你想
+推迟的过渡，但保持当前的URL），调用在配置时此方法。
+然后，在运行时间，通话 <code>$urlRouter.listen()</code> 在配置自己的
+<code>$locationChangeSuccess</code>事件处理程序.</p>
+</div><h5 id="methods_deferintercept_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>参数</th><th>类型</th><th>描述</th></tr></thead><tbody><tr><td>defer</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-router-urlrouterprovider-deferintercept-page"><p>Indicates whether to defer location change interception. Passing
 no parameter is equivalent to <code>true</code>.</p>
-</div></td></tr></tbody></table><h4 id="methods_deferintercept_example">Example</h4>
+</div></td></tr></tbody></table><h4 id="methods_deferintercept_example">例</h4>
 <div class="example"><div class="ui-router-router-urlrouterprovider-deferintercept-page"><pre class="prettyprint linenums">
 var app = angular.module('app', ['ui.router.router']);
 
@@ -61,8 +61,8 @@ app.config(function ($urlRouterProvider) {
 </div>
 </li>
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlRouter.js#L102" class="view-source icon-eye-open"> </a><h3 id="methods_otherwise">otherwise(rule)</h3>
-<div class="otherwise"><div class="ui-router-router-urlrouterprovider-otherwise-page"><p>Defines a path that is used when an invalid route is requested.</p>
-</div><h5 id="methods_otherwise_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rule</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-router-urlrouterprovider-otherwise-page"><p>The url path you want to redirect to or a function
+<div class="otherwise"><div class="ui-router-router-urlrouterprovider-otherwise-page"><p>定义当请求无效路由使用路径.</p>
+</div><h5 id="methods_otherwise_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rule</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-router-urlrouterprovider-otherwise-page"><p>The url path you want to redirect to or a function
 rule that returns the url path. The function version is passed two params: 
 <code>$injector</code> and <code>$location</code> services, and must return a url string.</p>
 </div></td></tr></tbody></table><h5 id="methods_otherwise_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-router-urlrouterprovider-otherwise-page"><p><code>$urlRouterProvider</code> - <code>$urlRouterProvider</code> instance</p>
@@ -88,7 +88,7 @@ app.config(function ($urlRouterProvider) {
 <li><a href="https://github.com/angular-ui/ui-router/blob/1e46c8d/src/urlRouter.js#L65" class="view-source icon-eye-open"> </a><h3 id="methods_rule">rule(rule)</h3>
 <div class="rule"><div class="ui-router-router-urlrouterprovider-rule-page"><p>Defines rules that are used by <code>$urlRouterProvider</code> to find matches for
 specific URLs.</p>
-</div><h5 id="methods_rule_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rule</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-router-urlrouterprovider-rule-page"><p>Handler function that takes <code>$injector</code> and <code>$location</code>
+</div><h5 id="methods_rule_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rule</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-router-urlrouterprovider-rule-page"><p>Handler function that takes <code>$injector</code> and <code>$location</code>
 services as arguments. You can use them to return a valid path as a string.</p>
 </div></td></tr></tbody></table><h5 id="methods_rule_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-router-urlrouterprovider-rule-page"><p><code>$urlRouterProvider</code> - <code>$urlRouterProvider</code> instance</p>
 </div></td></tr></table><h4 id="methods_rule_example">Example</h4>
@@ -124,7 +124,7 @@ will continue trying to find another one that matches.</li>
 <li><strong>string</strong> which is treated as a redirect and passed to <code>$location.url()</code></li>
 <li><strong>void</strong> or any <strong>truthy</strong> value tells <code>$urlRouter</code> that the url was handled.</li>
 </ul>
-</div><h5 id="methods_when_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>what</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-router-urlrouterprovider-when-page"><p>The incoming path that you want to redirect.</p>
+</div><h5 id="methods_when_parameters">参数</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>what</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-router-urlrouterprovider-when-page"><p>The incoming path that you want to redirect.</p>
 </div></td></tr><tr><td>handler</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-router-urlrouterprovider-when-page"><p>The path you want to redirect your user to.</p>
 </div></td></tr></tbody></table><h4 id="methods_when_example">Example</h4>
 <div class="example"><div class="ui-router-router-urlrouterprovider-when-page"><pre class="prettyprint linenums">
